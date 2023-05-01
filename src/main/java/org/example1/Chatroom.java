@@ -1,7 +1,3 @@
-//Name - Aluthgama Guruge Dulmini Kanchana Guruge
-//NSID: agg362
-//Student ID: 11303534
-
 package org.example1;
 import java.util.*;
 import java.util.concurrent.locks.Lock;
@@ -10,15 +6,10 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Chatroom {
 
-    Enumeration names;
-    String key;
 
     private Lock chatLock;
-
     Hashtable<String, ArrayList<ClientHandler>> hashtable = new Hashtable<String, ArrayList<ClientHandler>>();
-
     private Set<String> chatGroups = new HashSet<>();
-
     public Chatroom(){
         chatLock= new ReentrantLock();
     }
@@ -105,14 +96,7 @@ public class Chatroom {
 
         chatLock.unlock();
         return clientThreads;
-
     }
-
-
-
-
-
-
 
 }
 
