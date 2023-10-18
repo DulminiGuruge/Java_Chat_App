@@ -4,6 +4,12 @@ import java.net.*;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * The HelloWorld program implements an application that
+ * simply displays "Hello World!" to the standard output.
+ *
+ * @author  Dulmini Guruge
+ */
 // Client class
 public class Client
 {
@@ -46,7 +52,6 @@ public class Client
             System.out.println(dis.readUTF());
             String userName=scn.nextLine();
             dos.writeUTF(userName);
-          //  dos.flush();
 
             // the following loop performs the exchange of
             // information between client and client handler
@@ -59,9 +64,7 @@ public class Client
                 if(choosedOption.equals("1"))
                 {
                     dos.writeUTF(choosedOption);
-                    //dos.flush();
                     System.out.println(dis.readUTF());
-                    //System.out.println("Add a Chatroom name");
                     String chatroomName = scn.nextLine();
                     System.out.println(chatroomName +" ");
                     dos.writeUTF(chatroomName);
